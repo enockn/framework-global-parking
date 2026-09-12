@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-"""Framework Global Parking Intelligence Platform — inference core.
+"""Urban Onstreet Parking Ocupancy Prediction — inference core.
 
 No alternative ML model is fitted here. Future forecasts are Framework-consistent
 empirical marginal forecasts over historically observed parking states.
