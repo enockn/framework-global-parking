@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Framework Global Parking Intelligence Platform.
+"""Urban Onstreet Parking Ocupancy Prediction.
 
 Run locally:
     python -m streamlit run streamlit_app.py
@@ -17,7 +17,7 @@ import streamlit as st
 
 from framework_inference import DAY_ORDER, MONTH_NAMES, ForecastRequest, FrameworkPredictor
 
-APP_TITLE="Framework Global Parking Intelligence Platform"
+APP_TITLE="Urban Onstreet Parking Ocupancy Prediction"
 CARTO_LIGHT="https://basemaps.cartocdn.com/gl/positron-gl-style/style.json"
 CARTO_DARK="https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json"
 st.set_page_config(page_title=APP_TITLE,page_icon="🅿️",layout="wide",initial_sidebar_state="expanded")
