@@ -1,5 +1,5 @@
 """
-Prepare the Framework Global Parking Intelligence Platform serving bundle.
+Prepare the Framework Urban Onstreet Parking Ocupancy Prediction serving bundle.
 
 Scientific principle
 --------------------
@@ -385,7 +385,7 @@ def main():
     print("[7/7] Writing deployment metadata ...")
     horizons=sorted(int(x) for x in fw["horizon_min"].dropna().unique())
     meta={
-        "platform_name":"Framework Global Parking Intelligence Platform",
+        "platform_name":"Urban Onstreet Parking Ocupancy Prediction",
         "serving_semantics":"Framework empirical-state marginal forecast",
         "data_start":emeta["data_start"],"data_end":emeta["data_end"],
         "calendar_source":emeta["calendar_source"],
