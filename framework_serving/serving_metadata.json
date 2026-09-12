@@ -1,0 +1,133 @@
+{
+  "platform_name": "Framework Global Parking Intelligence Platform",
+  "serving_semantics": "Framework empirical-state marginal forecast",
+  "data_start": "2022-01-03 09:06:00",
+  "data_end": "2025-08-30 13:19:00",
+  "calendar_source": "merged_parking_data.arrival_time line-by-line",
+  "arrival_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "arrival_days_of_week": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ],
+  "arrival_hours": [
+    7.0,
+    7.25,
+    7.5,
+    7.75,
+    8.0,
+    8.25,
+    8.5,
+    8.75,
+    9.0,
+    9.25,
+    9.5,
+    9.75,
+    10.0,
+    10.25,
+    10.5,
+    10.75,
+    11.0,
+    11.25,
+    11.5,
+    11.75,
+    12.0,
+    12.25,
+    12.5,
+    12.75,
+    13.0,
+    13.25,
+    13.5,
+    13.75,
+    14.0,
+    14.25,
+    14.5,
+    14.75,
+    15.0,
+    15.25,
+    15.5,
+    15.75,
+    16.0,
+    16.25,
+    16.5,
+    16.75,
+    17.0,
+    17.25,
+    17.5,
+    17.75,
+    18.0
+  ],
+  "available_horizons": [
+    5,
+    15,
+    30,
+    60
+  ],
+  "framework_error_halfwidth": {
+    "5": {
+      "q90": 0.00018501746832078061,
+      "q95": 0.00030106117010297883
+    },
+    "15": {
+      "q90": 0.00031496593469637624,
+      "q95": 0.0004080731007225613
+    },
+    "30": {
+      "q90": 0.0004530220062154422,
+      "q95": 0.0005645063254618443
+    },
+    "60": {
+      "q90": 0.0014082365831861623,
+      "q95": 0.0020710674684926147
+    }
+  },
+  "files": {
+    "climatology_ext_calendar": "climatology_ext_calendar.parquet",
+    "climatology_ext": "climatology_ext.parquet",
+    "climatology_section_calendar": "climatology_section_calendar.parquet",
+    "climatology_context_calendar": "climatology_context_calendar.parquet",
+    "climatology_global_calendar": "climatology_global_calendar.parquet",
+    "historical_reference": "historical_arrival_state_reference.parquet",
+    "framework_transition_library": "framework_transition_library.parquet"
+  },
+  "geometry_diagnostics": {
+    "n_features": 4326,
+    "n_bad_geometry": 0
+  },
+  "n_events": 826967,
+  "n_ext_ids": 4326,
+  "allowed_parking_types": [
+    "Payantes",
+    "Livraison",
+    "PMR",
+    "Gratuites"
+  ],
+  "allowed_parking_geometries": [
+    "LONGITUDINAL",
+    "EPI+75",
+    "BATAILLE"
+  ],
+  "color_rule": {
+    "green": "occupancy < 5%",
+    "orange": "5% <= occupancy <= 50%",
+    "red": "occupancy > 50%"
+  },
+  "future_forecast_definition": "For future times, actual current occupancy is unknowable. The platform estimates the current occupancy distribution from historical states observed at real arrival_time values, then marginalizes the exact saved Framework M4 transition delta over historically analogous Framework states. No future actual occupancy is used.",
+  "historical_validation_definition": "For timestamps inside the observed data interval, actual occupancy is reconstructed exactly from arrival/departure event intervals. If an exact held-out Framework test origin exists, the saved Framework M4 prediction is used directly."
+}

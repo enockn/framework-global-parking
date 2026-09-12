@@ -1,0 +1,28 @@
+# Python / local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+
+# Streamlit local secrets
+.streamlit/secrets.toml
+
+# Raw research data and model-development outputs: never commit these
+merged_parking_data.csv
+mldf_clean_merge.csv
+mldf_lean_merge.csv
+outputs_pd_evaluation_v9/
+outputs_pd_evaluation*/
+*.log
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Keep the deployment serving bundle. Large binary members are handled by Git LFS.
+!framework_serving/
+!framework_serving/**
